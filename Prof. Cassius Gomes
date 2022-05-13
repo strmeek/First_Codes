@@ -1,0 +1,10 @@
+#problem 1
+
+a = 200
+s = 0
+
+while a < 1200:
+  s = s + a
+  a = a + 2
+
+print(s)
