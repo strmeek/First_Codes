@@ -1,0 +1,57 @@
+"""Questão 1"""
+lista = []
+numero = 0
+
+while numero != -1:
+  numero = int(input("Digite um Número:"))
+  lista.append(numero)
+
+lista.remove(-1)
+print(lista)
+
+"""Questão 2"""
+lista_15 = []
+
+for i in range(15):
+  numero = int(input("Digite os 15 Números:"))
+  lista_15.append(numero)
+
+lista_15.sort()
+print(lista_15)
+lista_15.reverse()
+print(lista_15)
+
+"""Questão 3"""
+linguagensprogramacao = ["Python", "Java", "JavaScript", "C", "Delphi", "R"]
+
+linguagensprogramacao.insert(6, "Assembly")
+linguagensprogramacao.insert(7, "Visual Basic")
+linguagensprogramacao.insert(8, "SQL")
+linguagensprogramacao.insert(9, "PHP")
+linguagensprogramacao.insert(10, "Ruby")
+print(linguagensprogramacao)
+
+linguagensprogramacao.pop(3)
+linguagensprogramacao.pop(4)
+linguagensprogramacao.pop(6)
+print(linguagensprogramacao)
+
+"""Questão 4"""
+import random as rd
+
+numero_aleatorio = rd.randint(1,250)
+count = 0
+numero_usuario = -1
+
+while numero_usuario != 0:
+  numero_usuario = int(input("Digite um Número:"))
+  count += 1
+  if 0 < numero_usuario > numero_aleatorio:
+    print("Número do usuário é maior, tente novamente")
+  elif 0 < numero_usuario < numero_aleatorio:
+    print("Número do usuario é menor, tente novamente")
+  elif numero_usuario == numero_aleatorio:
+    print("Você Acertou em %d tentativas" %count)
+    break
+  else:
+    print("Você Desistiu, Obrigado por Jogar")
